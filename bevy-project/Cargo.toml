@@ -1,0 +1,17 @@
+[package]
+name = "bevy-project"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { version = "0.15", features = [
+    "bevy_core_pipeline",
+    "bevy_render",
+    "bevy_asset",
+    "bevy_pbr",
+    "x11",
+    "serialize",
+    "bevy_window",
+    "png",
+]}
+bevy_egui = "0.33.0"
