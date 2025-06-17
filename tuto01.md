@@ -207,7 +207,7 @@ pub fn run() {
 }
 ```
 
-![Joueur dans la scène](/image/imh03.png)
+![Joueur dans la scène](/image/img03.png)
 
 ## Implémentation de la caméra libre
 
