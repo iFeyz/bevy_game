@@ -2,7 +2,8 @@ mod client;
 mod player;
 mod camera;
 use std::env;
-
+mod ground;
+mod water;
 fn main() {
     let mut args = env::args();
     args.next();

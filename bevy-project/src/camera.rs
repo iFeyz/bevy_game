@@ -2,7 +2,9 @@ use bevy::input::keyboard::KeyCode;
 use bevy::input::mouse::MouseButton;
 use bevy::input::mouse::MouseMotion;
 use bevy::prelude::*;
+use bevy_atmosphere::prelude::*;
 use crate::player::Player;
+
 
 #[derive(Resource, Default)]
 pub struct CameraSettings {
@@ -47,7 +49,7 @@ pub fn free_camera_system(
     
     if let Ok(mut transform) = query.get_single_mut() {
         let mut direction = Vec3::ZERO;
-        let speed : f32 =  5.0;
+        let speed : f32 =  30.0;
 
 
         if keyboard_input.pressed(KeyCode::KeyS) {
@@ -83,6 +85,7 @@ fn spawn_camera(
         Camera3d::default(),
         FreeCamera,
         CameraPlayer::default(),
+        AtmosphereCamera::default(),
         Transform::from_xyz(0.0, 1.0, 0.0).looking_at(Vec3::ZERO, Vec3::Y),
     ));
 }
